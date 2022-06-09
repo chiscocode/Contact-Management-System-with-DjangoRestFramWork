@@ -10,7 +10,7 @@ class ContactSerializer(serializers.ModelSerializer):
 class PickupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pickup
-        fields = ('id','sendername','recivername','senderemail','reciveremail','senderphone','reciverphone','senderaddress','reciveraddress','parcel')
+        fields = ('id','uuid','sendername','recivername','senderemail','reciveremail','senderphone','reciverphone','senderaddress','reciveraddress','parcel','status','request_date')
 
 
 # User Serializer

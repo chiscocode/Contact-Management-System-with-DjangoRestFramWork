@@ -32,7 +32,7 @@ class Pickup(models.Model):
     senderaddress = models.CharField(max_length=200,null=False)
     reciveraddress = models.CharField(max_length=200,null=False)
     parcel = models.TextField(blank=True)
-    status=models.CharField(max_length=200,null=False,choices=Status)
+    status=models.CharField(max_length=200,null=True,choices=Status)
     request_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:

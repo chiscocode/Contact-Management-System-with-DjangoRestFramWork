@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 # register, login and logout
-from .views import RegisterAPI,LoginAPI
+from .views import *
 from knox import views as knox_views
 
 urlpatterns = [
@@ -22,6 +22,9 @@ urlpatterns = [
     path('login/', LoginAPI.as_view(), name='login'),
     path('logout/', knox_views.LogoutView.as_view(), name='logout'),
     path('logoutall/', knox_views.LogoutAllView.as_view(), name='logoutall'),
+
+    # serch functionality
+    path('track/',views.PickupAPIView.as_view(), name='search'),
 
 
 
