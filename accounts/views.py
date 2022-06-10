@@ -12,7 +12,8 @@ from knox.models import AuthToken
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
 from django.contrib.auth import login
-
+# permesion
+from rest_framework.permissions import AllowAny
 
 
 
@@ -46,6 +47,7 @@ class PickupCreateAPIView(generics.CreateAPIView):
     
 
 class PickupListAPIView(generics.ListAPIView):
+    permission_classes = [AllowAny]
     queryset = Pickup.objects.all()
     serializer_class = PickupSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
