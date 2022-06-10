@@ -1,24 +1,18 @@
 from django.shortcuts import render
-from rest_framework.response import Response
 from .models import *
 from .serializers import *
-from rest_framework.decorators import api_view
 from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
-
-
-# from rest_framework import filters
-
 # autheticatication
 # register
 from rest_framework import generics, permissions
 from knox.models import AuthToken
-
 # login
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
 from django.contrib.auth import login
+
 
 
 
