@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import django_heroku
 import os
+from decouple import config
 
 from pathlib import Path
 
