@@ -6,7 +6,7 @@ from knox import views as knox_views
 
 urlpatterns = [
     path('contact/', views.ContactListAPIView.as_view()),
-    path('contact/',views.ContactCreateAPIView.as_view()),
+    path('contact/post',views.ContactCreateAPIView.as_view()),
     path('contact/update/<int:pk>',views.ContactUpdateAPIView.as_view()),
     path('contact/delete/<int:pk>',views.ContactRetrieveDestroyAPIView.as_view()),
     
