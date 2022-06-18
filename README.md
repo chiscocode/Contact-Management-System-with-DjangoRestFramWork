@@ -3,9 +3,9 @@ The aim of this system is to enable users keep record of his/her contact informa
 
 
 ## features include :
---> Authentication
---> Crud Functionality (Create, Read, Update and Delete)
---> Search Functionality
+--> Authentication.
+--> Crud Functionality (Create, Read, Update and Delete).
+--> Search Functionality.
 
 ## Endpoint include :
 ```
