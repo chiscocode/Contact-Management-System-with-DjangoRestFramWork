@@ -85,7 +85,7 @@ localhost:8000/api/contact/?search=1
 or
 
 ```
-http://mlogistic.herokuapp.com/api/contact/?search=1
+http://mlogistic.herokuapp.com/api/contact/?search=patrick
 ```
 
 
