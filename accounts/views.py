@@ -18,12 +18,12 @@ from rest_framework.permissions import AllowAny
 
 
 
-# class ContactListAPIView(generics.ListAPIView):
-#     queryset = Contact.objects.all()
-#     serializer_class = ContactSerializer
+class ContactListAPIView(generics.ListAPIView):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
 
 
-class ContactCreateAPIView(generics.ListCreateAPIView):
+class ContactCreateAPIView(generics.CreateListAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
