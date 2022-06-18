@@ -23,7 +23,7 @@ class ContactListAPIView(generics.ListAPIView):
     serializer_class = ContactSerializer
 
 
-class ContactCreateAPIView(generics.CreateListAPIView):
+class ContactCreateAPIView(generics.CreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
 
