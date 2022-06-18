@@ -21,6 +21,11 @@ from rest_framework.permissions import AllowAny
 class ContactListAPIView(generics.ListAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_fields = ['email', 'name']
+    search_fields = ['=email', 'name']
+    ordering_fields = ['name', 'email']
+    ordering = ['email']
 
 
 class ContactCreateAPIView(generics.CreateAPIView):
@@ -35,37 +40,6 @@ class ContactUpdateAPIView(generics.RetrieveUpdateAPIView):
 class ContactRetrieveDestroyAPIView(generics.RetrieveDestroyAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
-
-
-
-
-# pacel
-
-class PickupCreateAPIView(generics.CreateAPIView):
-    queryset = Pickup.objects.all()
-    serializer_class = PickupSerializer
-    
-
-class PickupListAPIView(generics.ListAPIView):
-    permission_classes = [AllowAny]
-    queryset = Pickup.objects.all()
-    serializer_class = PickupSerializer
-    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ['uuid', 'sendername']
-    search_fields = ['=uuid', 'sendername']
-    ordering_fields = ['sendername', 'uuid']
-    ordering = ['uuid']
-
-
-class PickupUpdateAPIView(generics.RetrieveUpdateAPIView):
-    queryset = Pickup.objects.all()
-    serializer_class = PickupSerializer
-
-
-class PickupRetrieveDestroyAPIView(generics.RetrieveDestroyAPIView):
-    queryset = Pickup.objects.all()
-    serializer_class = PickupSerializer
-    
 
 
 

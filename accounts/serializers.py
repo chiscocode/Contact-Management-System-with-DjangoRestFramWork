@@ -7,11 +7,6 @@ class ContactSerializer(serializers.ModelSerializer):
         model = Contact
         fields = "__all__"
 
-class PickupSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Pickup
-        fields = ('id','uuid','sendername','recivername','senderemail','reciveremail','senderphone','reciverphone','senderaddress','reciveraddress','parcel','status','request_date')
-
 
 # User Serializer
 class UserSerializer(serializers.ModelSerializer):
